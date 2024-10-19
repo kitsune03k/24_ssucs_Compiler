@@ -1,6 +1,6 @@
 # 24_ssucs_Compiler
 
-24학년도 2학기 숭실대 컴퓨터 컴파일러 과제
+24-2 숭실대 컴퓨터 컴파일러 과제
 
 ### [과제1](https://github.com/kitsune03k/24_ssucs_Compiler/tree/main/hw1)
 
