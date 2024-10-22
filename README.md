@@ -10,7 +10,7 @@
 
 정수, 실수에 대해 사칙연산을 지원하는 계산기 제작
 
-### [과제3](https://github.com/kitsune03k/24_ssucs_Compiler/tree/main/hw3)
+### 과제3
 
 declaration_specifiers, declarator에 대한 설명
 
