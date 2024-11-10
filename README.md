@@ -17,3 +17,7 @@ declaration_specifiers, declarator에 대한 설명
 ### [과제4](https://github.com/kitsune03k/24_ssucs_Compiler/tree/main/hw4)
 
 lex & yacc로 c언어 파서 제작
+
+### [과제5](https://github.com/kitsune03k/24_ssucs_Compiler/tree/main/hw5)
+
+파싱에 대한 신텍스 트리 출력
