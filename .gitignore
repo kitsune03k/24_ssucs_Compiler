@@ -15,4 +15,7 @@
 # ide
 /.idea/
 /*.dSYM/
-/cmake-build-debug/
+
+# 과제 폴더 내
+/*/cmake-build-debug/
+/*/.idea
