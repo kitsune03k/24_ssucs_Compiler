@@ -22,7 +22,8 @@ declaration_specifiers, declarator에 대한 설명 (따로 코드는 없음)\
 declaration_specifiers는\
 **선언자에 지정해 줄 스토리지 클래스와 자료형**\
 declarator는\
-**단순 변수, 배열, 포인터, 함수등의 이름**\
+**단순 변수, 배열, 포인터, 함수등의 이름**
+
 이 핵심입니다
 
 
