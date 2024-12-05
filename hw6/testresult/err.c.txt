@@ -1,0 +1,676 @@
+=======  syntax tree  ==========
+N_PROGRAM (0,0)
+|  (ID="f1") TYPE:2c89980 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  TYPE
+|  |  |  |  |  (void)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  (ID="str") TYPE:2c89a00 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  (char 1)
+|  |  |  |  |  |  |  |  (ID="result") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="str") TYPE:2c89a00 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  str
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="result") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_MINUS (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="str") TYPE:2c89a00 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  (ID="x") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  (ID="y") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  (ID="z") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="y") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  10
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_SWITCH (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LABEL_CASE (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="z") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EMPTY (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LABEL_CASE (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ADD (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="y") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EMPTY (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LABEL_DEFAULT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EMPTY (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  (ID="notfunction") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="notfunction") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="notfunction") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  100
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="num") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  (ID="sum") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  (ID="ns") TYPE:2c8ae70 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  STRUCT
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  FIELD
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:2c842f0 KIND:FIELD SPEC=NULL LEV=3 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  (ID="nns") TYPE:2c8ae70 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:2c8ae70)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="num") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  12
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRUCT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="ns") TYPE:2c8ae70 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  i
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  34
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="sum") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ADD (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="num") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="ns") TYPE:2c8ae70 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nns") TYPE:2c8ae70 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_NOT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="ns") TYPE:2c8ae70 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="result1") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="result2") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="b") TYPE:2c8b9d0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="b") TYPE:2c8b9d0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="result1") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_DIV (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="b") TYPE:2c8b9d0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="result2") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_MOD (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="b") TYPE:2c8b9d0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="x") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="y") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="value") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="value") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STAR (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ADD (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="x") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="y") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ARRAY (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="y") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  4
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="fun") TYPE:2c8c940 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="x") TYPE:2c842f0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  (int)
+|  |  |  |  |  (ID="y") TYPE:2c84380 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  (float)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="gun") TYPE:2c8cb50 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  TYPE
+|  |  |  |  |  (void)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="f2") TYPE:2c8cd20 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  TYPE
+|  |  |  |  |  (void)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  (ID="b") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="fun") TYPE:2c8c940 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  2
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  3
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="b") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="fun") TYPE:2c8c940 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  4
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  (ID="i") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  (ID="ns") TYPE:2c8d550 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  STRUCT
+|  |  |  |  |  |  |  |  |  |  |  |  FIELD
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:2c842f0 KIND:FIELD SPEC=NULL LEV=3 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRUCT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="ns") TYPE:2c8d550 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  f
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FLOAT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  1.00
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ADD (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestruct") TYPE:2c8d550 KIND:STRUCT SPEC=NULL LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  100
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_SIZE_EXP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="fun") TYPE:2c8c940 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  (ID="result") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  (ID="b") TYPE:2c8df80 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  (ID="array") TYPE:2c8e0e0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  ARRAY
+|  |  |  |  |  |  |  |  |  |  |  |  |  INDEX
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  2
+|  |  |  |  |  |  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="result") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_LSS (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="b") TYPE:2c8df80 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_FOR (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_FOR_EXP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="gun") TYPE:2c8cb50 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_POST_INC (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="a") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:2c845c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="x") TYPE:2c84380 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  (float)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="x") TYPE:2c84380 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FLOAT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  1.2
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_SWITCH (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="x") TYPE:2c84380 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LABEL_CASE (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EMPTY (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LABEL_DEFAULT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EMPTY (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="f") TYPE:2c84380 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (float)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="ptr") TYPE:2c8efb0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="f") TYPE:2c84380 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FLOAT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  123.45
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="ptr") TYPE:2c8efb0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="f3") TYPE:2c8f510 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  TYPE
+|  |  |  |  |  POINTER
+|  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  (ID="f") TYPE:2c84380 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  (float)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  (ID="f") TYPE:2c84380 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  N_EXP_FLOAT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  456.789
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  (ID="f") TYPE:2c84380 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="f4") TYPE:2c8f910 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  TYPE
+|  |  |  |  |  (void)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_PRE_INC (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  (ID="i") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_SWITCH (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:2c842f0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LABEL_DEFAULT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EMPTY (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LABEL_CASE (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EMPTY (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LABEL_DEFAULT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EMPTY (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_BREAK (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_CONTINUE (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_WHILE (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EMPTY (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="arr1") TYPE:2c90750 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  ARRAY
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  INDEX
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FLOAT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  4.5
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  (ID="arr2") TYPE:2c90860 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  ARRAY
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  INDEX
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  7
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (void)
+|  |  |  |  |  |  |  |  |  |  |  (ID="EE") TYPE:2c90450 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  ENUM
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  ENUMERATORS
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="MON") TYPE:0 KIND:ENUM_LITERAL SPEC=NULL LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  INIT
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FLOAT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  1.4
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="TUE") TYPE:0 KIND:ENUM_LITERAL SPEC=NULL LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="WED") TYPE:0 KIND:ENUM_LITERAL SPEC=NULL LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  INIT
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_INIT_LIST_ONE (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="MON") TYPE:0 KIND:ENUM_LITERAL SPEC=NULL LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestruct") TYPE:2c90ae0 KIND:VAR SPEC=AUTO LEV=2 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  STRUCT
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  FIELD
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="v") TYPE:2c844a0 KIND:FIELD SPEC=NULL LEV=3 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (void)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+error case 13 - *** semantic error at line 7: Arithmetic type expression required in unary operation
+error case 58 - *** semantic error at line 7: Not permitted type casting in expression
+error case 19 - *** semantic error at line 17: Illegal identifier z in constant expression
+error case 51 - *** semantic error at line 19: Illegal expression type in case label
+error case 19 - *** semantic error at line 20: Illegal identifier y in constant expression
+error case 18 - *** semantic error at line 20: Illegal constant expression
+error case 51 - *** semantic error at line 21: Illegal expression type in case label
+error case 21 - *** semantic error at line 29: Illegal type in function call expression
+error case 58 - *** semantic error at line 29: Not permitted type casting in expression
+error case 24 - *** semantic error at line 43: Incompatible type in additive expression
+error case 58 - *** semantic error at line 43: Not permitted type casting in expression
+error case 27 - *** semantic error at line 45: Scalar type expression required in expression
+error case 58 - *** semantic error at line 45: Not permitted type casting in expression
+error case 28 - *** semantic error at line 55: Arithmetic type expression required in binary operation
+error case 58 - *** semantic error at line 55: Not permitted type casting in expression
+error case 29 - *** semantic error at line 56: Integral type expression required in expression
+error case 31 - *** semantic error at line 62: Pointer type expression required in pointer operation
+error case 58 - *** semantic error at line 62: Not permitted type casting in expression
+error case 32 - *** semantic error at line 64: Array type required in array expression
+error case 58 - *** semantic error at line 64: Not permitted type casting in expression
+warning case 12 - --- warning at line 80: Incompatible types in argument or return expression
+error case 34 - *** semantic error at line 80: Too many arguments in function call
+error case 35 - *** semantic error at line 81: Too few arguments in function call
+error case 37 - *** semantic error at line 93: Illegal struct field identifier in struct reference expression
+error case 60 - *** semantic error at line 93: Expression is not an lvalue
+error case 58 - *** semantic error at line 93: Not permitted type casting in expression
+error case 38 - *** semantic error at line 97: Illegal kind of identifier nicestruct in expression
+error case 24 - *** semantic error at line 97: Incompatible type in additive expression
+error case 58 - *** semantic error at line 97: Not permitted type casting in expression
+error case 39 - *** semantic error at line 99: Illegal type size in sizeof operation
+error case 40 - *** semantic error at line 107: Illegal expression type in relational operation
+error case 49 - *** semantic error at line 109: Scalar type expression required in middle of for-expression
+error case 50 - *** semantic error at line 120: Integral type expression required in statement
+error case 58 - *** semantic error at line 132: Not permitted type casting in expression
+error case 57 - *** semantic error at line 140: Not permitted type conversion in return expression
+error case 60 - *** semantic error at line 147: Expression is not an lvalue
+error case 71 - *** semantic error at line 157: Case label not within a switch statement
+error case 72 - *** semantic error at line 159: Default label not within a switch statement
+error case 73 - *** semantic error at line 163: Break statement not within loop or switch statement
+error case 74 - *** semantic error at line 164: Continue statement not within a loop
+error case 82 - *** semantic error at line 175: Illegal array size or type
+error case 86 - *** semantic error at line 175: Illegal array size or empty array
+error case 83 - *** semantic error at line 177: Illegal element type of array declarator
+error case 81 - *** semantic error at line 173: Integer type expression required in enumerator
+error case 84 - *** semantic error at line 184: Illegal type in struct or union field
+       0   1   2   3   4   5   6   7   8   9
+   0                                        
+  10               O                   O   O
+  20       O           O           O   O   O
+  30       O   O       O   O       O   O   O
+  40   O                                   O
+  50   O   O                       O   O   X
+  60   O                                    
+  70       O   O   O   O                    
+  80   X   O   O   O   O   X   O           X
+  90   X           X                        
+83.78%
+** Semantic Analysis Error **
+Exit Program

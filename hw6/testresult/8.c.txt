@@ -1,0 +1,1488 @@
+=======  syntax tree  ==========
+N_PROGRAM (0,0)
+|  (ID="Stack") TYPE:a31c3960 KIND:TYPE SPEC=TYPEDEF LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  STRUCT
+|  |  |  |  FIELD
+|  |  |  |  |  (ID="arr") TYPE:a31c3a50 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  ARRAY
+|  |  |  |  |  |  |  |  INDEX
+|  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  101
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  (ID="top") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  (int)
+|  |  |  |  |  (ID="lim") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  (int)
+|  (ID="initStack") TYPE:a31c3d60 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c3cd0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (void)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_ARROW (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c3cd0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  top
+|  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c3cd0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  lim
+|  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  100
+|  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="isFull") TYPE:a31c42a0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c4210 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF_ELSE (0,0)
+|  |  |  |  |  |  |  |  N_EXP_EQL (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_ARROW (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c4210 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  top
+|  |  |  |  |  |  |  |  |  N_EXP_ARROW (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c4210 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  lim
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="isEmpty") TYPE:a31c4920 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c4890 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF_ELSE (0,0)
+|  |  |  |  |  |  |  |  N_EXP_EQL (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_ARROW (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c4890 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  top
+|  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="push") TYPE:a31c4fd0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c4eb0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  |  (ID="val") TYPE:a31be2f0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  (int)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF (0,0)
+|  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  (ID="isFull") TYPE:a31c42a0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c4eb0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_MINUS (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_ARRAY (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c4eb0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  arr
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_PRE_INC (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c4eb0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  top
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="val") TYPE:a31be2f0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="pop") TYPE:a31c59b0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c5920 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF (0,0)
+|  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  (ID="isEmpty") TYPE:a31c4920 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c5920 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_MINUS (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_ARRAY (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c5920 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  arr
+|  |  |  |  |  |  |  |  |  |  N_EXP_POST_DEC (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c5920 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  top
+|  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="peek") TYPE:a31c6310 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c6280 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF (0,0)
+|  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  (ID="isEmpty") TYPE:a31c4920 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c6280 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_MINUS (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_ARRAY (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c6280 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  arr
+|  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c6280 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  top
+|  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="printEmpty") TYPE:a31c6c30 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c6ba0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF_ELSE (0,0)
+|  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  (ID="isEmpty") TYPE:a31c4920 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c6ba0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c6ba0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  top
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  100
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="printFull") TYPE:a31c77f0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c7760 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF_ELSE (0,0)
+|  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  (ID="isFull") TYPE:a31c42a0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c7760 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c7760 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  top
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  100
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="main") TYPE:a31c8300 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  (ID="initStack") TYPE:a31c3d60 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_FOR (0,0)
+|  |  |  |  |  |  |  |  |  |  N_FOR_EXP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_LSS (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  100
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_POST_INC (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="push") TYPE:a31c4fd0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ADD (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  100
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printFull") TYPE:a31c77f0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="peek") TYPE:a31c6310 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="push") TYPE:a31c4fd0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  777
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printFull") TYPE:a31c77f0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="peek") TYPE:a31c6310 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="push") TYPE:a31c4fd0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  7777
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_FOR (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_FOR_EXP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_LSS (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  99
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_POST_INC (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="pop") TYPE:a31c59b0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printEmpty") TYPE:a31c6c30 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="peek") TYPE:a31c6310 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="pop") TYPE:a31c59b0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printEmpty") TYPE:a31c6c30 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="peek") TYPE:a31c6310 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="pop") TYPE:a31c59b0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+       0   1   2   3   4   5   6   7   8   9
+   0                                        
+  10               X                   X   X
+  20       X           X           X   X   X
+  30       X   X       X   X       X   X   X
+  40   X                                   X
+  50   X   X                       X   X   X
+  60   X                                    
+  70       X   X   X   X                    
+  80   X   X   X   X   X   X   X           X
+  90   X           X                        
+0.00%
+=======  semantic tree  ==========
+N_PROGRAM (0,132)
+|  (ID="Stack") TYPE:a31c3960 KIND:TYPE SPEC=TYPEDEF LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  STRUCT
+|  |  |  |  FIELD
+|  |  |  |  |  (ID="arr") TYPE:a31c3a50 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  ARRAY
+|  |  |  |  |  |  |  |  INDEX
+|  |  |  |  |  |  |  |  |  INT=101
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  (ID="top") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=404 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  (int)
+|  |  |  |  |  (ID="lim") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=408 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  (int)
+|  (ID="initStack") TYPE:a31c3d60 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c3cd0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (void)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  N_EXP_ASSIGN (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_ARROW (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3cd0,1)
+|  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c3cd0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  (ID="top") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=404 
+|  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  INT=0
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3cd0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c3cd0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  (ID="lim") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=408 
+|  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  INT=100
+|  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="isFull") TYPE:a31c42a0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c4210 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF_ELSE (0,0)
+|  |  |  |  |  |  |  |  N_EXP_EQL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_ARROW (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c4210,1)
+|  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c4210 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  (ID="top") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=404 
+|  |  |  |  |  |  |  |  |  N_EXP_ARROW (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c4210,1)
+|  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c4210 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  (ID="lim") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=408 
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  INT=1
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  INT=0
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="isEmpty") TYPE:a31c4920 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c4890 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF_ELSE (0,0)
+|  |  |  |  |  |  |  |  N_EXP_EQL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_ARROW (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c4890,1)
+|  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c4890 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  (ID="top") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=404 
+|  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  INT=0
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  INT=1
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  INT=0
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="push") TYPE:a31c4fd0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c4eb0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  |  (ID="val") TYPE:a31be2f0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  (int)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF (0,0)
+|  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cc7b0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c42a0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="isFull") TYPE:a31c42a0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c4210,0)
+|  |  |  |  |  |  |  |  |  |  |  (DONE:a31c4210)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c4eb0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c4eb0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cc870,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_MINUS (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  INT=1
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_ARRAY (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (a31c3a50,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c4eb0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c4eb0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="arr") TYPE:a31c3a50 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_PRE_INC (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c4eb0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c4eb0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="top") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=404 
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  (ID="val") TYPE:a31be2f0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="pop") TYPE:a31c59b0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c5920 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF (0,0)
+|  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cc970,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c4920,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="isEmpty") TYPE:a31c4920 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c4890,0)
+|  |  |  |  |  |  |  |  |  |  |  (DONE:a31c4890)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c5920,1)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c5920 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cca30,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_MINUS (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  INT=1
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  N_EXP_ARRAY (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (a31c3a50,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c5920,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c5920 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="arr") TYPE:a31c3a50 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_POST_DEC (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c5920,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c5920 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="top") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=404 
+|  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="peek") TYPE:a31c6310 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c6280 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF (0,0)
+|  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ccb70,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c4920,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="isEmpty") TYPE:a31c4920 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c4890,0)
+|  |  |  |  |  |  |  |  |  |  |  (DONE:a31c4890)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c6280,1)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c6280 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ccc30,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_MINUS (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  INT=1
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  N_EXP_ARRAY (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (a31c3a50,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c6280,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c6280 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="arr") TYPE:a31c3a50 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c6280,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c6280 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="top") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=404 
+|  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="printEmpty") TYPE:a31c6c30 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c6ba0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF_ELSE (0,0)
+|  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ccd70,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c4920,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="isEmpty") TYPE:a31c4920 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c4890,0)
+|  |  |  |  |  |  |  |  |  |  |  (DONE:a31c4890)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c6ba0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c6ba0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cce30,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ccef0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ccfb0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,12)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,8)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c6ba0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c6ba0 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="top") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=404 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  INT=100
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="printFull") TYPE:a31c77f0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  |  (ID="s") TYPE:a31c7760 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  POINTER
+|  |  |  |  |  |  |  |  ELEMENT_TYPE
+|  |  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_IF_ELSE (0,0)
+|  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd070,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c42a0,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="isFull") TYPE:a31c42a0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c4210,0)
+|  |  |  |  |  |  |  |  |  |  |  (DONE:a31c4210)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c7760,1)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c7760 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd130,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd1f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd2b0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,12)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,8)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ARROW (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c7760,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="s") TYPE:a31c7760 KIND:PARM SPEC=NULL LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="top") TYPE:a31be2f0 KIND:FIELD SPEC=NULL LEV=1 VAL=0 ADDR=404 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  INT=100
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  (ID="main") TYPE:a31c8300 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  TYPE
+|  |  |  FUNCTION
+|  |  |  |  PARAMETER
+|  |  |  |  TYPE
+|  |  |  |  |  (int)
+|  |  |  |  BODY
+|  |  |  |  |  N_STMT_COMPOUND (0,416)
+|  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  TYPE
+|  |  |  |  |  |  |  |  (DONE:a31c3960)
+|  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd370,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3d60,0)
+|  |  |  |  |  |  |  |  |  |  |  (ID="initStack") TYPE:a31c3d60 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c3cd0,0)
+|  |  |  |  |  |  |  |  |  |  |  (DONE:a31c3cd0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd3f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd470,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_FOR (0,0)
+|  |  |  |  |  |  |  |  |  |  N_FOR_EXP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  INT=1
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_LSS (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  INT=100
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_POST_INC (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd530,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c4fd0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="push") TYPE:a31c4fd0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,8)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c4eb0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c4eb0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd5b0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ADD (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  INT=100
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd670,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c77f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printFull") TYPE:a31c77f0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c7760,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c7760)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd6f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd770,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,8)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd830,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c6310,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="peek") TYPE:a31c6310 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c6280,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c6280)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd8b0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd930,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c4fd0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="push") TYPE:a31c4fd0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,8)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c4eb0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c4eb0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cd9b0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  INT=777
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cda70,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c77f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printFull") TYPE:a31c77f0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c7760,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c7760)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cdaf0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cdb70,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,8)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cdc30,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c6310,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="peek") TYPE:a31c6310 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c6280,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c6280)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cdcb0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cdd30,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c4fd0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="push") TYPE:a31c4fd0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,8)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c4eb0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c4eb0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cddb0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  INT=7777
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cde70,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_FOR (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_FOR_EXP (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_ASSIGN (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  INT=0
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_LSS (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  INT=99
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_POST_INC (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be2f0,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="i") TYPE:a31be2f0 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=12 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_COMPOUND (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cdf30,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c59b0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="pop") TYPE:a31c59b0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c5920,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c5920)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31cdfb0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce030,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c6c30,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printEmpty") TYPE:a31c6c30 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c6ba0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c6ba0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce0b0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce130,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,8)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce1f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c6310,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="peek") TYPE:a31c6310 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c6280,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c6280)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce270,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c59b0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="pop") TYPE:a31c59b0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c5920,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c5920)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce370,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce3f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c6c30,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printEmpty") TYPE:a31c6c30 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c6ba0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c6ba0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce470,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be4a0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce4f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31be5c0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="printf") TYPE:a31be5c0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,8)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31be4e0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_STRING_LITERAL (a31be4e0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  LITERAL: printf
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce5b0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c6310,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="peek") TYPE:a31c6310 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c6280,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c6280)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce630,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_EXPRESSION (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_FUNCTION_CALL (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce6b0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c59b0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="pop") TYPE:a31c59b0 KIND:FUNC SPEC=NULL LEV=0 VAL=0 ADDR=0 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST (0,4)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31c5920,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (DONE:a31c5920)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_AMP (a31ce730,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_IDENT (a31c3960,1)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (ID="nicestack") TYPE:a31c3960 KIND:VAR SPEC=AUTO LEV=1 VAL=0 ADDR=16 
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_ARG_LIST_NIL (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_RETURN (0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_CAST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  (int)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_EXP_INT_CONST (a31be2f0,0)
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  INT=0
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  N_STMT_LIST_NIL (0,0)

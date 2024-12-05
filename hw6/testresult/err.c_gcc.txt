@@ -1,0 +1,108 @@
+err.c: In function ‘f1’:
+err.c:7:18: error: wrong type argument to unary minus
+    7 |         result = -str; // case 13, 58 - minus는 arithmetic type에만 적용 가능
+      |                  ^
+err.c:17:13: error: case label does not reduce to an integer constant
+   17 |             case z:
+      |             ^~~~
+err.c:20:13: error: case label does not reduce to an integer constant
+   20 |             case y + 1: // case 19, 18, 51 - y+1은 constant expression이 아님
+      |             ^~~~
+err.c:29:13: error: called object ‘notfunction’ is not a function or function pointer
+   29 |         i = notfunction(100); // case 21, 58 - function이 아닌데 function처럼 호출
+      |             ^~~~~~~~~~~
+err.c:27:13: note: declared here
+   27 |         int notfunction, i;
+      |             ^~~~~~~~~~~
+err.c:43:19: error: invalid operands to binary + (have ‘int’ and ‘struct nicestruct’)
+   43 |         sum = num + ns; // case 24, 58 - struct는 덧셈 가능하지 않음
+      |                   ^
+err.c:45:15: error: wrong type argument to unary exclamation mark
+   45 |         nns = !ns; // case 27, 58 - struct는 not 가능하지 않음 (scalar type만 가능)
+      |               ^
+err.c:55:21: error: invalid operands to binary / (have ‘int’ and ‘int *’)
+   55 |         result1 = a / b; // case 28, 58 - div 연산은 arithmetic type이 필요함
+      |                     ^
+err.c:56:21: error: invalid operands to binary % (have ‘int’ and ‘int *’)
+   56 |         result2 = a % b; // case 29, 58 - mod 연산은 integral type이 필요함
+      |                     ^
+err.c:62:17: error: invalid type argument of unary ‘*’ (have ‘int’)
+   62 |         value = *(x + y); // case 31, 58 - 역참조 연산에는 포인터가 필요함
+      |                 ^~~~~~~~
+err.c:64:10: error: subscripted value is neither array nor pointer nor vector
+   64 |         y[4] = 1; // case 32, 58 - 배열 연산에는 배열이 필요함
+      |          ^
+err.c: In function ‘f2’:
+err.c:80:13: error: too many arguments to function ‘fun’
+   80 |         a = fun(1, 2, 3); // case 34 - 너무 많은 매개변수
+      |             ^~~
+err.c:69:5: note: declared here
+   69 | int fun(int x, float y) {
+      |     ^~~
+err.c:81:13: error: too few arguments to function ‘fun’
+   81 |         b = fun(4); // case 35 - 너무 적은 매개변수
+      |             ^~~
+err.c:69:5: note: declared here
+   69 | int fun(int x, float y) {
+      |     ^~~
+err.c:93:11: error: ‘struct nicestruct’ has no member named ‘f’
+   93 |         ns.f = 1.00;
+      |           ^
+err.c:97:13: error: ‘nicestruct’ undeclared (first use in this function)
+   97 |         i = nicestruct + 100; // case 38 - nicestruct는 identifier가 아님
+      |             ^~~~~~~~~~
+err.c:97:13: note: each undeclared identifier is reported only once for each function it appears in
+err.c:107:20: warning: comparison between pointer and integer
+  107 |         result = a < b; // case 40 - int와 int*형은 비교가 불가능
+      |                    ^
+err.c:109:21: error: void value not ignored as it ought to be
+  109 |         for (a = 0; gun(); a++) { // case 49 - for문의 중간 조건은 scalar 타입이 필요함
+      |                     ^~~
+err.c:110:13: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+  110 |             printf("hello");
+      |             ^~~~~~
+err.c:1:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+  +++ |+#include <stdio.h>
+    1 | void f1() {
+err.c:110:13: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]
+  110 |             printf("hello");
+      |             ^~~~~~
+err.c:110:13: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+err.c:117:17: error: switch quantity not an integer
+  117 |         switch (x) { // case 50 - switch은 integral type(int, char, enum)을 필요로 함
+      |                 ^
+err.c:132:13: warning: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+  132 |         ptr = (int) i; // case 58 - float -> 포인터 캐스팅 불가
+      |             ^
+err.c: In function ‘f3’:
+err.c:140:12: error: incompatible types when returning type ‘float’ but ‘int *’ was expected
+  140 |     return f; // case 57 - return시 float -> 포인터 묵시적 형변환 불가
+      |            ^
+err.c: In function ‘f4’:
+err.c:147:9: error: lvalue required as increment operand
+  147 |         ++1; // case 60 - 1은 lvalue가 아님
+      |         ^~
+err.c:156:9: error: case label not within a switch statement
+  156 |         case 1: // case 71 - case label이 switch문 안에 쓰이지 않음
+      |         ^~~~
+err.c:158:9: error: ‘default’ label not within a switch statement
+  158 |         default: // case 72 - default label이 switch문 안에 쓰이지 않음
+      |         ^~~~~~~
+err.c:163:9: error: break statement not within loop or switch
+  163 |         break; // case 73 - break가 loop문이나 switch문 안에 쓰이지 않음
+      |         ^~~~~
+err.c:164:9: error: continue statement not within a loop
+  164 |         continue; // case 74 - continue가 loop문 안에 쓰이지 않음
+      |         ^~~~~~~~
+err.c:173:23: error: enumerator value for ‘MON’ is not an integer constant
+  173 |         enum e {MON = 1.4, TUE, WED}; // case 81 - enum은 integer type이어야 함
+      |                       ^~~
+err.c:175:13: error: size of array ‘arr1’ has non-integer type
+  175 |         int arr1[4.5]; // case 82, 86 - array의 사이즈는 interger type이어야 함
+      |             ^~~~
+err.c:177:14: error: declaration of ‘arr2’ as array of voids
+  177 |         void arr2[7]; // case 83 - void array는 만들 수 없음
+      |              ^~~~
+err.c:184:18: error: variable or field ‘v’ declared void
+  184 |             void v;
+      |                  ^

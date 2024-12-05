@@ -39,7 +39,12 @@ lex & yacc로 c언어 파서 제작\
 ### [과제6](https://github.com/kitsune03k/24_ssucs_Compiler/tree/main/hw6)
 
 파싱에 대한 신텍스 트리, 시멘틱스 트리 출력\
-(n.n/8, 평균 x.x, 최고 x.x)
+(6.8/8, 평균 3.1, 최고 7.4)
+
+### 과제7
+
+FSM에서 동작하는 asm 생성을 위한 code generator 완성
+(x.x/x, 평균 x.x, 최고 x.x)
 
 
 ## 총평
