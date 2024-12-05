@@ -43,7 +43,7 @@ lex & yacc로 c언어 파서 제작\
 
 ### 과제7
 
-FSM에서 동작하는 asm 생성을 위한 code generator 완성
+FSM에서 동작하는 asm 생성을 위한 code generator 완성\
 (x.x/x, 평균 x.x, 최고 x.x)
 
 
