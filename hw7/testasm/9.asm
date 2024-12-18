@@ -1,0 +1,172 @@
+	      INT   0, 44
+	      SUP   0, main
+	      RET   0, 0
+fun:
+	      INT   0, 44
+	      LDA   1, 20
+	     LITI   0, 2
+	      STX   0, 1
+	      POP   0, 1
+	      LDA   1, 24
+	     LITI   0, 1
+	      STX   0, 1
+	      POP   0, 1
+	      LDA   1, 28
+	     LITI   0, 1
+	      STX   0, 1
+	      POP   0, 1
+	      LDA   1, 32
+	     LITI   0, 0
+	     STXB   0, 0
+	      POP   0, 1
+	      LDA   1, 36
+	     LITI   0, 1
+	     STXB   0, 0
+	      POP   0, 1
+	      LDA   1, 40
+	     LITI   0, 2
+	      STX   0, 1
+	      POP   0, 1
+	      LDA   1, 16
+	     LITI   0, 1
+	      STX   0, 1
+	      POP   0, 1
+L2:
+	      LOD   1, 16
+	      LOD   1, 12
+	     LSSI   0, 0
+	      JPC   0, L3
+	      LOD   1, 40
+	      LOD   1, 20
+	     EQLI   0, 0
+	      JPC   0, L4
+	      LOD   1, 20
+	     LITI   0, 2
+	      MOD   0, 0
+	     LITI   0, 0
+	     EQLI   0, 0
+	      JPC   0, L5
+	      LOD   1, 28
+	      LDA   1, 28
+	      LDX   0, 1
+	     INCI   0, 0
+	      STO   0, 1
+	      POP   0, 1
+	      JMP   0, L6
+L5:
+	      LOD   1, 24
+	      LDA   1, 24
+	      LDX   0, 1
+	     INCI   0, 0
+	      STO   0, 1
+	      POP   0, 1
+L6:
+	      LOD   1, 20
+	      LDA   1, 20
+	      LDX   0, 1
+	     INCI   0, 0
+	      STO   0, 1
+	      POP   0, 1
+	      LDA   1, 40
+	     LITI   0, 2
+	      STX   0, 1
+	      POP   0, 1
+	      JMP   0, L7
+L4:
+	      LOD   1, 20
+	     LITI   0, 2
+	      MOD   0, 0
+	     LITI   0, 0
+	     EQLI   0, 0
+	      JPC   0, L8
+	      LOD   1, 28
+	      LDA   1, 28
+	      LDX   0, 1
+	     INCI   0, 0
+	      STO   0, 1
+	      POP   0, 1
+	      LOD   1, 24
+	      LDA   1, 24
+	      LDX   0, 1
+	     DECI   0, 0
+	      STO   0, 1
+	      POP   0, 1
+	      JMP   0, L9
+L8:
+	      LOD   1, 24
+	      LDA   1, 24
+	      LDX   0, 1
+	     INCI   0, 0
+	      STO   0, 1
+	      POP   0, 1
+	      LOD   1, 28
+	      LDA   1, 28
+	      LDX   0, 1
+	     DECI   0, 0
+	      STO   0, 1
+	      POP   0, 1
+L9:
+	      LOD   1, 40
+	      LDA   1, 40
+	      LDX   0, 1
+	     INCI   0, 0
+	      STO   0, 1
+	      POP   0, 1
+L7:
+L1:
+	      LOD   1, 16
+	      LDA   1, 16
+	      LDX   0, 1
+	     INCI   0, 0
+	      STO   0, 1
+	      POP   0, 1
+	      JMP   0, L2
+L3:
+	      INT   0, 12
+	      LDA   0, 12
+	      LOD   1, 24
+	      LOD   1, 28
+	      POP   0, 6
+	     ADDR   0, printf
+	      CAL   0, 0
+	      RET   0, 0
+main:
+	      INT   0, 16
+	      LDA   1, 12
+	     LITI   0, 1
+	      STX   0, 1
+	      POP   0, 1
+L11:
+	      LOD   1, 12
+	     LITI   0, 10
+	     LSSI   0, 0
+	      JPC   0, L12
+	      INT   0, 12
+	      LDA   0, 20
+	      LOD   1, 12
+	      POP   0, 5
+	     ADDR   0, printf
+	      CAL   0, 0
+	      INT   0, 12
+	      LOD   1, 12
+	      POP   0, 4
+	     ADDR   0, fun
+	      CAL   0, 0
+	      INT   0, 12
+	      LDA   0, 36
+	      POP   0, 4
+	     ADDR   0, printf
+	      CAL   0, 0
+L10:
+	      LOD   1, 12
+	      LDA   1, 12
+	      LDX   0, 1
+	     INCI   0, 0
+	      STO   0, 1
+	      POP   0, 1
+	      JMP   0, L11
+L12:
+	      RET   0, 0
+.literal    12  "%d/%d"
+.literal    20  "Answer %d : "
+.literal    36  "\n"
